@@ -1,0 +1,1052 @@
+---
+// Project data with detailed information for modal
+const projects = [
+  {
+    id: 'sparkcommerce',
+    title: 'SparkCommerce',
+    category: 'E-Commerce',
+    shortDesc: 'Multi-platform e-commerce manager with TikTok Shop & Shopee integration.',
+    fullDesc: 'A comprehensive multi-marketplace e-commerce management system enabling centralized SKU management and real-time synchronization across TikTok Shop and Shopee platforms. Features OAuth 2.0 integration, bi-directional stock sync, and group-based dashboard reporting.',
+    techStack: ['Flutter', 'Node.js', 'Express', 'PostgreSQL', 'SQLite', 'JWT'],
+    features: [
+      'OAuth 2.0 integration for TikTok Shop & Shopee',
+      'Centralized SKU management with cross-platform mapping',
+      'Bi-directional stock synchronization (push/pull)',
+      'Multi-shop management per user',
+      'Real-time order management & shipping integration',
+      'HMAC-authenticated webhook for dashboard sync',
+    ],
+    role: 'Full Stack Developer Intern',
+    company: 'PT. Infomedia Nusantara',
+    images: [
+      '/images/projects/sparkcommerce/login-portrait.webp',
+      '/images/projects/sparkcommerce/dashboard-portrait.webp',
+      '/images/projects/sparkcommerce/shop-portrait.webp',
+      '/images/projects/sparkcommerce/profil-portrait.webp',
+    ],
+    imageOrientation: 'portrait',
+    thumbnail: '/images/projects/sparkcommerce/dashboard-portrait.webp',
+    liveUrl: null,
+    githubUrl: null,
+    proprietaryNote: 'Source code is proprietary and owned by PT. Infomedia Nusantara',
+    span: 'row-span-2',
+  },
+  {
+    id: 'cfu-wib-graphql',
+    title: 'CFU-WIB AI Chatbot',
+    category: 'AI',
+    shortDesc: 'AI chatbot for corporate finance analytics with natural language to SQL.',
+    fullDesc: 'An AI-powered chatbot for Telkom CFU (Corporate Finance Unit) WIB division. Enables natural language queries on financial data, automatically generates SQL from user questions, and provides insights on Revenue, EBITDA, Net Income performance. Uses GraphQL with real-time streaming for progress updates and Chainlit for the chat interface.',
+    techStack: ['Python', 'FastAPI', 'GraphQL', 'Strawberry', 'Chainlit', 'SQLite', 'Plotly', 'Telkom LLM API'],
+    features: [
+      'Natural language to SQL generation',
+      'GraphQL API with real-time subscriptions',
+      'Excel-to-SQLite ETL pipeline',
+      'Multiple CFU analysis prompts (15+ types)',
+      'Revenue, EBITDA, Net Income analytics',
+      'Trend and growth analysis',
+      'Interactive chart generation (Plotly)',
+      'Streaming LLM responses',
+      'Chainlit chat UI with authentication',
+    ],
+    role: 'AI Engineer Intern',
+    company: 'Telkom Indonesia',
+    images: [
+      '/images/projects/cfu-wib/login.webp',
+      '/images/projects/cfu-wib/chat.webp',
+      '/images/projects/cfu-wib/chatbot.webp',
+    ],
+    imageOrientation: 'landscape',
+    thumbnail: '/images/projects/cfu-wib/chatbot.webp',
+    liveUrl: null,
+    githubUrl: null,
+    proprietaryNote: 'Source code is proprietary and owned by Telkom Indonesia',
+    span: '',
+  },
+  {
+    id: 'poiterra',
+    title: 'POI Terra',
+    category: 'AI',
+    shortDesc: 'POI enrichment system with multi-search engines and LLM summarization.',
+    fullDesc: 'A Point of Interest (POI) enrichment system for enterprise data. Processes CSV files with entity names, searches multiple engines (EXA Document Search, Azure Bing Grounding, SearXNG), and uses Telkom LLM for intelligent summarization. Supports 6 profile types including Company Profile, SWOT Analysis, Strategic Highlight, and more.',
+    techStack: ['Python', 'FastAPI', 'Streamlit', 'Docker', 'Telkom LLM API', 'Azure Bing Grounding', 'SearXNG'],
+    features: [
+      'Single inference for individual entity queries',
+      'Batch CSV processing with concurrent execution',
+      'Multi-search engine support (EXA, Bing, SearXNG)',
+      '6 profile types for enterprise analysis',
+      'LLM summarization with Telkom LLM API',
+      'Auto CSV delimiter detection',
+      'Configurable batch size processing',
+      'Docker Compose deployment',
+    ],
+    role: 'AI Engineer Intern',
+    company: 'Telkom Indonesia',
+    images: [
+      '/images/projects/poiterra/single_inference.webp',
+      '/images/projects/poiterra/resultsingle1.webp',
+      '/images/projects/poiterra/resultsingle2.webp',
+      '/images/projects/poiterra/summarysingleresult.webp',
+      '/images/projects/poiterra/batch_csv.webp',
+      '/images/projects/poiterra/batch_csv2.webp',
+    ],
+    imageOrientation: 'landscape',
+    thumbnail: '/images/projects/poiterra/single_inference.webp',
+    liveUrl: null,
+    githubUrl: null,
+    proprietaryNote: 'Source code is proprietary and owned by Telkom Indonesia',
+    span: '',
+  },
+  {
+    id: 'eduvate',
+    title: 'EduVate',
+    category: 'AI / EdTech',
+    shortDesc: 'AI-powered learning platform with RAG chat, quiz generation, and gamification.',
+    fullDesc: 'An intelligent educational platform for personalized learning. Features RAG-based AI chat powered by Gemini and ChromaDB for contextual Q&A from uploaded PDFs. Includes AI-generated quizzes (MCQ + Essay with auto-grading), gamification with XP, levels, badges, streaks, and leaderboards. Built for the SEVENT Hackathon and deployed on Firebase + Google Cloud Run.',
+    techStack: ['React', 'Vite', 'Tailwind CSS', 'FastAPI', 'Python', 'Gemini AI', 'ChromaDB', 'PostgreSQL', 'Firebase', 'Google Cloud Run'],
+    features: [
+      'RAG-based AI chat with document context (Gemini + ChromaDB)',
+      'AI-generated quizzes with MCQ and essay questions',
+      'Auto-grading with detailed feedback',
+      'Gamification: XP, levels, badges, streaks',
+      'Leaderboard with global and weekly rankings',
+      'Analytics dashboard with progress tracking',
+      'Topic management and study organization',
+      'Flashcard system for spaced repetition',
+      'Daily check-in rewards',
+    ],
+    role: 'Full Stack Developer',
+    company: null,
+    images: [
+      '/images/projects/eduvate/login.webp',
+      '/images/projects/eduvate/register.webp',
+      '/images/projects/eduvate/dashboard.webp',
+      '/images/projects/eduvate/dashboadrdinsight.webp',
+      '/images/projects/eduvate/listtopic.webp',
+      '/images/projects/eduvate/detailtopik.webp',
+      '/images/projects/eduvate/chateduvate.webp',
+      '/images/projects/eduvate/generatequiz.webp',
+      '/images/projects/eduvate/listquiz.webp',
+      '/images/projects/eduvate/quizdetail.webp',
+      '/images/projects/eduvate/takequiz.webp',
+      '/images/projects/eduvate/quizsubmitmodal.webp',
+      '/images/projects/eduvate/resultquiz.webp',
+    ],
+    imageOrientation: 'landscape',
+    thumbnail: '/images/projects/eduvate/dashboard.webp',
+    liveUrl: 'https://eduvate-learning.web.app',
+    githubUrl: 'https://github.com/GhefinIndra/EduVate',
+    proprietaryNote: null,
+    span: '',
+  },
+  {
+    id: 'llmrace',
+    title: 'LLM Race App',
+    category: 'AI',
+    shortDesc: 'Benchmarking platform for comparing multiple LLM providers side by side.',
+    fullDesc: 'A comprehensive LLM benchmarking application that sends the same prompt to multiple AI providers simultaneously, tracks response times, and runs cross-evaluations to produce quality scores and rankings. Features real-time streaming progress, animated analytics dashboard, and configuration management.',
+    techStack: ['React', 'TypeScript', 'FastAPI', 'Python', 'Tailwind CSS', 'Zustand', 'Recharts', 'Framer Motion'],
+    features: [
+      'Multi-provider LLM registration (OpenAI, Anthropic, Gemini, AWS Bedrock)',
+      'Parallel race execution with response time tracking',
+      'Cross-evaluation system with 5 criteria (accuracy, coherence, relevance, completeness, safety)',
+      'Real-time streaming progress via polling',
+      'Animated analytics dashboard with podium rankings',
+      'Save/load race configurations as JSON',
+    ],
+    role: 'AI Engineer Intern',
+    company: 'Telkom Indonesia',
+    images: [
+      '/images/projects/llmrace/register.webp',
+      '/images/projects/llmrace/race.webp',
+      '/images/projects/llmrace/race_results.webp',
+      '/images/projects/llmrace/evaluate.webp',
+      '/images/projects/llmrace/analytics.webp',
+      '/images/projects/llmrace/summary.webp',
+    ],
+    imageOrientation: 'landscape',
+    thumbnail: '/images/projects/llmrace/analytics.webp',
+    liveUrl: 'https://huggingface.co/spaces/ghefinindra/llm-race',
+    githubUrl: 'https://github.com/GhefinIndra/llm_race_app',
+    proprietaryNote: null,
+    span: '',
+  },
+  {
+    id: 'diddocchecker',
+    title: 'DID Document Checker',
+    category: 'AI',
+    shortDesc: 'AI-powered commissioning test document validation system with OCR & multi-layer validation.',
+    fullDesc: 'An automated document validation system for Telkom Indonesia commissioning test documents. Uses OCR, LLM, and multimodal AI to extract data from PDFs, validate against Excel references, detect signatures, verify date ranges, and perform BOQ calculations.',
+    techStack: ['FastAPI', 'Python', 'Streamlit', 'Docling', 'Tesseract OCR', 'Docker', 'Pandas'],
+    features: [
+      'PDF splitting & OCR extraction with AI document detection',
+      'Header validation against Excel reference data',
+      'Signature detection & authentication using multimodal LLM',
+      'Date range validation across documents',
+      'BOQ formula validation & volume matching',
+      'Cable length validation (OTDR vs OPM measurements)',
+      'Multi-LLM engine support (Apilogy, Multimodal, Nanonets)',
+    ],
+    role: 'AI Engineer Intern',
+    company: 'Telkom Indonesia',
+    images: [
+      '/images/projects/diddocchecker/login.webp',
+      '/images/projects/diddocchecker/home.webp',
+      '/images/projects/diddocchecker/uploadproggres.webp',
+      '/images/projects/diddocchecker/validresult.webp',
+      '/images/projects/diddocchecker/invalidresults.webp',
+      '/images/projects/diddocchecker/informasi.webp',
+    ],
+    imageOrientation: 'landscape',
+    thumbnail: '/images/projects/diddocchecker/home.webp',
+    liveUrl: null,
+    githubUrl: null,
+    proprietaryNote: 'Source code is proprietary and owned by Telkom Indonesia',
+    span: '',
+  },
+  {
+    id: 'whatsappblast',
+    title: 'WhatsApp Blast Pro',
+    category: 'Desktop App',
+    shortDesc: 'Desktop automation tool for bulk WhatsApp messaging with anti-spam delays.',
+    fullDesc: 'A cross-platform Electron desktop application for WhatsApp automation. Features bulk messaging to multiple recipients with configurable delays, CSV/Excel import, message templates with variables, group messaging, and real-time message monitoring.',
+    techStack: ['Electron', 'React', 'Vite', 'whatsapp-web.js', 'PapaParse', 'XLSX'],
+    features: [
+      'QR code authentication with WhatsApp Web',
+      'Bulk message blast to multiple recipients',
+      'Import contacts from CSV/Excel files',
+      'Message templates with custom variables',
+      'Configurable delay between messages (anti-spam)',
+      'Send messages to WhatsApp groups',
+      'Real-time incoming message monitor',
+      'Cross-platform (Windows, macOS, Linux)',
+    ],
+    role: 'Full Stack Developer Intern',
+    company: 'PT. Infomedia Nusantara',
+    images: [
+      '/images/projects/whatsappblast/connect.webp',
+      '/images/projects/whatsappblast/qrcode.webp',
+      '/images/projects/whatsappblast/monitor.webp',
+      '/images/projects/whatsappblast/group.webp',
+      '/images/projects/whatsappblast/blast.webp',
+      '/images/projects/whatsappblast/blasting.webp',
+    ],
+    imageOrientation: 'landscape',
+    thumbnail: '/images/projects/whatsappblast/blast.webp',
+    liveUrl: null,
+    githubUrl: null,
+    proprietaryNote: 'Source code is proprietary and owned by PT. Infomedia Nusantara',
+    span: '',
+  },
+  {
+    id: 'autodeletespam',
+    title: 'AutoDeleteSPAM',
+    category: 'Mobile App',
+    shortDesc: 'SMS spam blocker with pattern matching and auto-deletion.',
+    fullDesc: 'A comprehensive Android application for automatic SMS spam detection and deletion. Features pattern-based blocking, whitelist protection, activity logging, and real-time notifications when spam is detected and removed.',
+    techStack: ['Flutter', 'Dart', 'Node.js', 'Express', 'MySQL', 'Sequelize', 'JWT'],
+    features: [
+      'Pattern-based spam detection with multiple match types',
+      'Auto-delete SMS from blocked senders',
+      'Whitelist protection for trusted contacts',
+      'Activity logs with deletion history',
+      'Real-time notifications on spam detection',
+      'Dashboard with blocking statistics',
+    ],
+    role: 'Full Stack Developer Intern',
+    company: 'PT. Infomedia Nusantara',
+    images: [
+      '/images/projects/autodeletespam/splash-portrait.webp',
+      '/images/projects/autodeletespam/login-portrait.webp',
+      '/images/projects/autodeletespam/dashboard-portrait.webp',
+      '/images/projects/autodeletespam/blocksenders-portrait.webp',
+      '/images/projects/autodeletespam/whitelist-portrait.webp',
+      '/images/projects/autodeletespam/riwayatsendres-portrait.webp',
+      '/images/projects/autodeletespam/settings-portrait.webp',
+      '/images/projects/autodeletespam/profile-portrait.webp',
+    ],
+    imageOrientation: 'portrait',
+    thumbnail: '/images/projects/autodeletespam/dashboard-portrait.webp',
+    liveUrl: null,
+    githubUrl: null,
+    proprietaryNote: 'Source code is proprietary and owned by PT. Infomedia Nusantara',
+    span: 'row-span-2',
+  },
+  {
+    id: 'sparktapeat',
+    title: 'SparkTap&Eat',
+    category: 'Web App',
+    shortDesc: 'Café QR ordering system with real-time updates and admin dashboard.',
+    fullDesc: 'A comprehensive café ordering system where customers scan QR codes at their table to browse menu, add items to cart, and pay. Features real-time order tracking via Socket.IO, and a Kitchen Display System (KDS) for staff to manage orders with sound notifications.',
+    techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Zustand', 'Node.js', 'Express', 'MySQL', 'Socket.IO'],
+    features: [
+      'QR code scan per table for seamless ordering',
+      'Menu browsing with category filters',
+      'Shopping cart with quantity controls',
+      'Real-time order status tracking',
+      'Kitchen Display System (KDS) for staff',
+      'Sound alerts for new orders',
+      'Analytics dashboard with sales insights',
+    ],
+    role: 'Full Stack Developer Intern',
+    company: 'PT. Infomedia Nusantara',
+    images: [
+      '/images/projects/sparktapeat/cust_menu-portrait.webp',
+      '/images/projects/sparktapeat/cust_cart-portrait.webp',
+      '/images/projects/sparktapeat/cust_checkout-portrait.webp',
+      '/images/projects/sparktapeat/cust_selesaibayar-portrait.webp',
+      '/images/projects/sparktapeat/adm_login.webp',
+      '/images/projects/sparktapeat/adm_dashboard.webp',
+      '/images/projects/sparktapeat/adm_kds.webp',
+      '/images/projects/sparktapeat/adm_order.webp',
+      '/images/projects/sparktapeat/adm_kelola.webp',
+      '/images/projects/sparktapeat/adm_analytics.webp',
+    ],
+    imageOrientation: 'portrait',
+    thumbnail: '/images/projects/sparktapeat/cust_menu-portrait.webp',
+    liveUrl: 'https://resto.tuantoko.com/',
+    githubUrl: null,
+    proprietaryNote: 'Source code is proprietary and owned by PT. Infomedia Nusantara',
+    span: 'row-span-2',
+  },
+  {
+    id: 'umkmdashboard',
+    title: 'Dashboard 12K UMKM',
+    category: 'Web App',
+    shortDesc: 'Directory dashboard for 12,000 Indonesian SMEs from Telkom SRC Rumah BUMN.',
+    fullDesc: 'A comprehensive web dashboard for browsing and analyzing 12,000 UMKM (Indonesian SMEs) from Telkom SRC Rumah BUMN program. Features advanced search and filtering, statistics visualization with Recharts, interactive province maps with Leaflet, and detailed UMKM profiles.',
+    techStack: ['React', 'Vite', 'Tailwind CSS', 'Recharts', 'Leaflet', 'Node.js', 'Express', 'MySQL'],
+    features: [
+      'Search & filter by name, kategori, provinsi, kota, Rumah BUMN',
+      'Browse 12K UMKM dengan pagination',
+      'Detailed UMKM profile pages',
+      'Statistics dashboard with totals and distribution',
+      'Category distribution charts (Recharts)',
+      'Province map visualization (Leaflet)',
+      'Province and category exploration pages',
+      'Responsive design',
+    ],
+    role: 'Full Stack Developer Intern',
+    company: 'PT. Infomedia Nusantara',
+    images: [
+      '/images/projects/umkmdashboard/homepage.webp',
+      '/images/projects/umkmdashboard/homepage1.webp',
+      '/images/projects/umkmdashboard/jelajahumkm.webp',
+      '/images/projects/umkmdashboard/detailumkm.webp',
+      '/images/projects/umkmdashboard/provinsiumkm.webp',
+      '/images/projects/umkmdashboard/kategoriumkm.webp',
+    ],
+    imageOrientation: 'landscape',
+    thumbnail: '/images/projects/umkmdashboard/homepage.webp',
+    liveUrl: null,
+    githubUrl: null,
+    proprietaryNote: 'Source code is proprietary and owned by PT. Infomedia Nusantara',
+    span: '',
+  },
+  {
+    id: 'storetuantoko',
+    title: 'StoreTuanToko',
+    category: 'Web App',
+    shortDesc: 'E-commerce platform for Telkom digital products with admin dashboard.',
+    fullDesc: 'A full-featured e-commerce platform for Telkom DigiSales digital products. Includes customer storefront with catalog browsing, checkout with payment proof upload, and comprehensive admin dashboard for product/category management, order processing with status workflow, statistics, WhatsApp group notifications, and email confirmations.',
+    techStack: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MySQL', 'whatsapp-web.js', 'Nodemailer'],
+    features: [
+      'Product catalog with search and category filter',
+      'Wishlist functionality',
+      'Checkout with payment proof upload',
+      'Order tracking with invoice generation',
+      'Admin dashboard with products/categories CRUD',
+      'Order management with status workflow',
+      'Sales statistics with date filter',
+      'WhatsApp group notifications for new orders',
+      'Email notifications to customers',
+      'CSV export for orders',
+    ],
+    role: 'Full Stack Developer Intern',
+    company: 'PT. Infomedia Nusantara',
+    images: [
+      '/images/projects/storetuantoko/custdashboard.webp',
+      '/images/projects/storetuantoko/custdash2.webp',
+      '/images/projects/storetuantoko/checkout1.webp',
+      '/images/projects/storetuantoko/checkout2.webp',
+      '/images/projects/storetuantoko/adm_login.webp',
+      '/images/projects/storetuantoko/adm_kelolabarang.webp',
+      '/images/projects/storetuantoko/adm_kelolakategori.webp',
+      '/images/projects/storetuantoko/adm_pesanan.webp',
+    ],
+    imageOrientation: 'landscape',
+    thumbnail: '/images/projects/storetuantoko/custdashboard.webp',
+    liveUrl: 'http://store.tuantoko.com/',
+    githubUrl: null,
+    proprietaryNote: 'Source code is proprietary and owned by PT. Infomedia Nusantara',
+    span: '',
+  },
+  {
+    id: 'aistoretuantoko',
+    title: 'AI StoreTuanToko',
+    category: 'Web App',
+    shortDesc: 'AI products marketplace with dark mode interface for digital AI assets.',
+    fullDesc: 'A professional AI-powered digital products marketplace with modern dark mode interface. Specialized for AI products including prompts, tools, academic resources, business solutions, and creative assets. Features premium product listings with discount pricing, instant digital access, and comprehensive admin management.',
+    techStack: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MySQL', 'JWT', 'Multer'],
+    features: [
+      'Dark mode interface with cyan/blue accents',
+      'AI product categories (Prompts, Tools, Academic, Business, Creative)',
+      'Premium products with discount pricing',
+      'Instant access to digital AI products',
+      'Admin product/category management',
+      'Order management system',
+      'Image upload for products',
+      'Email notifications',
+      'Responsive mobile-friendly design',
+    ],
+    role: 'Full Stack Developer Intern',
+    company: 'PT. Infomedia Nusantara',
+    images: [
+      '/images/projects/aistoretuantoko/home.webp',
+      '/images/projects/aistoretuantoko/adm_login.webp',
+      '/images/projects/aistoretuantoko/adm_kategori.webp',
+      '/images/projects/aistoretuantoko/adm_order.webp',
+      '/images/projects/aistoretuantoko/adm_pesanan.webp',
+      '/images/projects/aistoretuantoko/adm_analytics.webp',
+    ],
+    imageOrientation: 'landscape',
+    thumbnail: '/images/projects/aistoretuantoko/home.webp',
+    liveUrl: 'https://aistore.tuantoko.com/',
+    githubUrl: null,
+    proprietaryNote: 'Source code is proprietary and owned by PT. Infomedia Nusantara',
+    span: '',
+  },
+
+
+  {
+    id: 'asuransibhayangkara',
+    title: 'Asuransi Bhakti Bhayangkara',
+    category: 'Mobile App',
+    shortDesc: 'Mobile insurance platform with OCR document scanning for KTP/SIM.',
+    fullDesc: 'A digital insurance platform for PT Asuransi Bhakti Bhayangkara. Features mobile-first application with OCR technology for automatic data extraction from KTP/SIM documents using Telkom LMM API. Includes complete insurance application flow from document upload to payment simulation with JWT-based authentication.',
+    techStack: ['Flutter', 'Dart', 'Node.js', 'Express', 'MySQL', 'JWT', 'Telkom LMM OCR API'],
+    features: [
+      'User registration & JWT authentication',
+      'OCR scan KTP - auto extract NIK & alamat',
+      'OCR scan SIM - extract license number',
+      'AKDP Insurance flow (Driver Accident Insurance)',
+      'SIRANMOR Insurance flow (Vehicle Insurance)',
+      'Dashboard with 9 insurance product cards',
+      'Insurance package selection & verification',
+      'Payment simulation',
+      'Profile management',
+    ],
+    role: 'Full Stack Developer Intern',
+    company: 'PT. Infomedia Nusantara',
+    images: [
+      '/images/projects/asuransibhayangkara/register-portrait.webp',
+      '/images/projects/asuransibhayangkara/login-portrait.webp',
+      '/images/projects/asuransibhayangkara/home-portrait.webp',
+      '/images/projects/asuransibhayangkara/asuransi sim-portrait.webp',
+      '/images/projects/asuransibhayangkara/isi ocr sim-portrait.webp',
+      '/images/projects/asuransibhayangkara/hasil ocr-portrait.webp',
+      '/images/projects/asuransibhayangkara/verifikasi data-portrait.webp',
+      '/images/projects/asuransibhayangkara/pilih asuransi-portrait.webp',
+      '/images/projects/asuransibhayangkara/verifikasipilihan-portrait.webp',
+      '/images/projects/asuransibhayangkara/pengajuan-portrait.webp',
+      '/images/projects/asuransibhayangkara/pembayaran-portrait.webp',
+      '/images/projects/asuransibhayangkara/pembayaran succes-portrait.webp',
+    ],
+    imageOrientation: 'portrait',
+    thumbnail: '/images/projects/asuransibhayangkara/home-portrait.webp',
+    liveUrl: null,
+    githubUrl: null,
+    proprietaryNote: 'Source code is proprietary and owned by PT. Infomedia Nusantara',
+    span: 'row-span-2',
+  },
+
+  {
+    id: 'hand2heart',
+    title: 'Hand2Heart',
+    category: 'Web App',
+    shortDesc: 'Donation platform (Web + Mobile) connecting donors with orphanages.',
+    fullDesc: 'A donation platform with Web and Mobile apps connecting donors (donatur) with orphanages (panti asuhan). Web version supports 3 roles (Donatur, PJ Panti, Admin) with React + Laravel + Firebase. Mobile app (Flutter) is donatur-focused with orphanage browsing, item donation requests, and donation history.',
+    techStack: ['React', 'Flutter', 'Laravel', 'Firebase', 'Tailwind CSS', 'PHP', 'Dart'],
+    features: [
+      'Web: Multi-role system (Donatur, PJ Panti, Admin)',
+      'Web: Admin dashboard for orphanage management',
+      'Mobile: Donatur-only app (no admin features)',
+      'Mobile: Browse orphanages & item requests',
+      'Mobile: Submit item donations with quantity',
+      'Firebase authentication & Firestore database',
+      'Donation history tracking',
+      'User profile management',
+    ],
+    role: 'Full Stack Developer',
+    company: null,
+    images: [
+      '/images/projects/hand2heart/home.webp',
+      '/images/projects/hand2heart/dashboard_donasi.webp',
+      '/images/projects/hand2heart/login-portrait.webp',
+      '/images/projects/hand2heart/register-portrait.webp',
+      '/images/projects/hand2heart/register2-portrait.webp',
+      '/images/projects/hand2heart/list panti-portrait.webp',
+      '/images/projects/hand2heart/donasibarang-portrait.webp',
+      '/images/projects/hand2heart/donasibarang2-portrait.webp',
+      '/images/projects/hand2heart/donasibarang3-portrait.webp',
+      '/images/projects/hand2heart/historydonasi-portrait.webp',
+      '/images/projects/hand2heart/profile-portrait.webp',
+    ],
+    imageOrientation: 'landscape',
+    thumbnail: '/images/projects/hand2heart/home.webp',
+    liveUrl: null,
+    githubUrl: 'https://github.com/GhefinIndra/hand2heart-project | https://github.com/GhefinIndra/mobile-hand2heart-project',
+    proprietaryNote: null,
+    span: '',
+  },
+  {
+    id: 'myservice',
+    title: 'MyService',
+    category: 'Web App',
+    shortDesc: 'Smartphone repair service platform with AI chat assistance.',
+    fullDesc: 'A web-based smartphone repair service platform. Users can consult smartphone problems, find nearby service locations, track damage history, and get AI-powered assistance. Built with Express.js backend with MySQL database for user management, damage tracking, and contact forms.',
+    techStack: ['HTML', 'CSS', 'JavaScript', 'Express', 'MySQL', 'OpenAI API'],
+    features: [
+      'User authentication (login/signup)',
+      'User profile management',
+      'AI chat assistance for diagnosing smartphone issues',
+      'Damage history tracking',
+      'Service location finder (map)',
+      'Contact form',
+      'Repair service guide (panduan)',
+    ],
+    role: 'Full Stack Developer',
+    company: null,
+    images: [
+      '/images/projects/myservice/beranda.webp',
+      '/images/projects/myservice/layanan.webp',
+    ],
+    imageOrientation: 'landscape',
+    thumbnail: '/images/projects/myservice/beranda.webp',
+    liveUrl: null,
+    githubUrl: 'https://github.com/GhefinIndra/myservice-project',
+    proprietaryNote: null,
+    span: '',
+  },
+  {
+    id: 'california-housing-ml',
+    title: 'California Housing Price Prediction',
+    category: 'AI',
+    shortDesc: 'ML regression model for predicting California housing prices with hyperparameter optimization.',
+    fullDesc: 'A Machine Learning project for predicting California housing prices using XGBoost regression. Features comprehensive EDA, data preprocessing, and hyperparameter optimization using GridSearchCV, RandomizedSearchCV, and Optuna. Includes Streamlit web app for interactive data exploration and real-time price prediction.',
+    techStack: ['Python', 'XGBoost', 'Scikit-learn', 'Optuna', 'Streamlit', 'Pandas', 'Matplotlib', 'Seaborn'],
+    features: [
+      'Exploratory Data Analysis (EDA) & visualization',
+      'Data preprocessing (outlier handling, encoding)',
+      'XGBoost baseline model',
+      'GridSearchCV hyperparameter tuning',
+      'RandomizedSearchCV optimization',
+      'Optuna Bayesian optimization',
+      'Model comparison (R², MSE, RMSE)',
+      'Interactive Streamlit web app',
+      'Real-time price prediction interface',
+    ],
+    role: 'Machine Learning Engineer',
+    company: null,
+    images: [
+      '/images/projects/machinelearning-californiahousingprice/home.webp',
+      '/images/projects/machinelearning-californiahousingprice/inputdata.webp',
+    ],
+    imageOrientation: 'landscape',
+    thumbnail: '/images/projects/machinelearning-californiahousingprice/home.webp',
+    liveUrl: null,
+    githubUrl: 'https://github.com/GhefinIndra/california-housing-ml-project',
+    proprietaryNote: null,
+    span: '',
+  },
+  {
+    id: 'drowsiness-detection',
+    title: 'Drowsiness Detection',
+    category: 'AI',
+    shortDesc: 'CNN+LSTM model for detecting driver drowsiness from facial video frames.',
+    fullDesc: 'A Computer Vision project for detecting driver drowsiness using deep learning. Uses CNN+LSTM architecture with TimeDistributed layers to process video frame sequences and classify drowsy vs non-drowsy states. Built for driver safety applications with real-time facial analysis capabilities.',
+    techStack: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'NumPy', 'Matplotlib'],
+    features: [
+      'CNN+LSTM hybrid architecture',
+      'TimeDistributed layers for video sequences',
+      'Binary classification (Drowsy/Non-Drowsy)',
+      'Facial feature extraction',
+      'Kaggle dataset integration',
+      'Model training & evaluation',
+      'Accuracy metrics visualization',
+    ],
+    role: 'Computer Vision Engineer',
+    company: null,
+    images: [
+      '/images/projects/cv-drowsinessdetection/nondrowsy.webp',
+      '/images/projects/cv-drowsinessdetection/drowsy.webp',
+    ],
+    imageOrientation: 'landscape',
+    thumbnail: '/images/projects/cv-drowsinessdetection/nondrowsy.webp',
+    liveUrl: null,
+    githubUrl: 'https://github.com/GhefinIndra/drowsiness-detection-project',
+    proprietaryNote: null,
+    span: '',
+  },
+
+];
+---
+
+<section id="projects" class="py-20 bg-surface transition-colors">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 fade-in-up">
+      <div>
+        <span class="text-primary font-bold tracking-wider text-sm uppercase">Selected Works</span>
+        <h2 class="mt-3 font-display text-3xl md:text-5xl font-bold text-text-main">Featured Projects</h2>
+      </div>
+    </div>
+    
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]">
+      {projects.map((project) => (
+        <div 
+          class={`${project.span} group relative rounded-3xl overflow-hidden cursor-pointer fade-in-up project-card`}
+          data-project-id={project.id}
+        >
+          <!-- Background - Gradient + Image with rounded inner container -->
+          <div class="w-full h-full bg-gradient-to-br from-slate-800 via-slate-900 to-indigo-950 p-4 flex items-center justify-center">
+            {project.thumbnail ? (
+              <div class="w-full h-full bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden flex items-center justify-center p-2">
+                <img 
+                  src={project.thumbnail} 
+                  alt={project.title}
+                  class="max-w-full max-h-full object-contain rounded-xl transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+            ) : (
+              <div class="w-full h-full bg-white/5 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                <span class="material-icons-round text-white/30 text-6xl">devices</span>
+              </div>
+            )}
+          </div>
+          
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-90 transition-opacity duration-300"></div>
+          
+          <!-- Content -->
+          <div class="absolute bottom-0 left-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+            <span class="text-primary text-xs font-bold uppercase tracking-wider mb-2 block">{project.category}</span>
+            <h3 class="text-2xl font-display font-bold text-white mb-2">{project.title}</h3>
+            <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">{project.shortDesc}</p>
+            <div class="mt-3 flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
+              <span>View Details</span>
+              <span class="material-icons-round text-lg ml-1">arrow_forward</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Modal Overlay -->
+<div id="project-modal" class="fixed inset-0 z-[100] hidden">
+  <!-- Backdrop -->
+  <div id="modal-backdrop" class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+  
+  <!-- Modal Content -->
+  <div class="absolute inset-0 flex items-center justify-center p-4 overflow-y-auto">
+    <div id="modal-content" class="relative bg-white rounded-3xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-hidden transform scale-95 opacity-0 transition-all duration-300">
+      <!-- Close Button -->
+      <button id="modal-close" class="absolute top-4 right-4 z-20 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-colors shadow-lg">
+        <span class="material-icons-round text-gray-600">close</span>
+      </button>
+      
+      <!-- Modal Inner -->
+      <div id="modal-inner" class="flex flex-col md:flex-row h-full max-h-[90vh]">
+        
+        <!-- Image Section with gradient background and rounded inner -->
+        <div id="modal-images-section" class="relative bg-gradient-to-br from-slate-800 via-slate-900 to-indigo-950 md:w-2/5 flex-shrink-0 h-80 md:h-auto md:min-h-[500px] p-4">
+          <!-- Carousel Container with rounded corners -->
+          <div id="carousel-wrapper" class="relative h-full overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm">
+            <div id="carousel-container" class="flex h-full">
+              <!-- Images injected by JS -->
+            </div>
+          </div>
+          
+          <!-- Carousel Controls - More visible buttons -->
+          <button id="carousel-prev" class="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 bg-white/90 hover:bg-white text-gray-800 shadow-lg rounded-full flex items-center justify-center transition-all z-10">
+            <span class="material-icons-round">chevron_left</span>
+          </button>
+          <button id="carousel-next" class="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 bg-white/90 hover:bg-white text-gray-800 shadow-lg rounded-full flex items-center justify-center transition-all z-10">
+            <span class="material-icons-round">chevron_right</span>
+          </button>
+          
+          <!-- Image Counter -->
+          <div id="image-counter" class="absolute bottom-6 left-1/2 -translate-x-1/2 px-3 py-1 bg-black/50 backdrop-blur rounded-full text-white text-sm font-medium">
+            1 / 4
+          </div>
+        </div>
+        
+        <!-- Content Section -->
+        <div id="modal-content-section" class="flex-1 overflow-y-auto p-8 md:p-10">
+          <!-- Header -->
+          <div class="mb-6">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <span id="modal-category" class="text-primary text-sm font-bold uppercase tracking-wider"></span>
+                <h2 id="modal-title" class="text-3xl md:text-4xl font-display font-bold text-text-main mt-1"></h2>
+                <p id="modal-role" class="text-text-muted mt-2"></p>
+              </div>
+            </div>
+            
+            <!-- Proprietary Note -->
+            <div id="modal-proprietary" class="mt-4 hidden">
+              <div class="flex items-center gap-2 px-4 py-3 bg-amber-50 border border-amber-200 rounded-xl">
+                <span class="material-icons-round text-amber-600 text-lg">lock</span>
+                <p id="proprietary-text" class="text-amber-800 text-sm"></p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tech Stack -->
+          <div class="mb-6">
+            <h4 class="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">Tech Stack</h4>
+            <div id="modal-tech" class="flex flex-wrap gap-2"></div>
+          </div>
+          
+          <!-- Description -->
+          <div class="mb-6">
+            <h4 class="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">About</h4>
+            <p id="modal-desc" class="text-text-main leading-relaxed"></p>
+          </div>
+          
+          <!-- Features -->
+          <div class="mb-6">
+            <h4 class="text-sm font-semibold text-text-muted uppercase tracking-wider mb-3">Key Features</h4>
+            <ul id="modal-features" class="space-y-2"></ul>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div id="modal-buttons" class="flex flex-wrap gap-3 pt-4 border-t border-gray-100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fullscreen Image Viewer -->
+<div id="fullscreen-overlay" class="fixed inset-0 z-[200] hidden bg-black/95 backdrop-blur-md">
+  <button id="fullscreen-close" class="absolute top-4 right-4 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+    <span class="material-icons-round text-white text-2xl">close</span>
+  </button>
+  
+  <div class="absolute inset-0 flex items-center justify-center p-4">
+    <img id="fullscreen-image" src="" alt="" class="max-w-full max-h-full object-contain" />
+  </div>
+  
+  <button id="fullscreen-prev" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+    <span class="material-icons-round text-white text-2xl">chevron_left</span>
+  </button>
+  <button id="fullscreen-next" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+    <span class="material-icons-round text-white text-2xl">chevron_right</span>
+  </button>
+  
+  <div id="fullscreen-counter" class="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 bg-black/50 rounded-full text-white text-sm font-medium">
+    1 / 4
+  </div>
+</div>
+
+<script is:inline define:vars={{ projects: JSON.stringify(projects) }}>
+  const projectsData = JSON.parse(projects);
+  let currentImageIndex = 0;
+  let currentProject = null;
+  let totalImages = 0;
+  let isTransitioning = false;
+  
+  // DOM Elements
+  const modal = document.getElementById('project-modal');
+  const modalBackdrop = document.getElementById('modal-backdrop');
+  const modalContent = document.getElementById('modal-content');
+  const modalInner = document.getElementById('modal-inner');
+  const modalImagesSection = document.getElementById('modal-images-section');
+  const modalClose = document.getElementById('modal-close');
+  const carouselWrapper = document.getElementById('carousel-wrapper');
+  const carouselContainer = document.getElementById('carousel-container');
+  const imageCounter = document.getElementById('image-counter');
+  const carouselPrev = document.getElementById('carousel-prev');
+  const carouselNext = document.getElementById('carousel-next');
+  
+  // Build carousel with clones for infinite loop
+  function buildCarousel(images) {
+    if (images.length === 0) {
+      carouselContainer.innerHTML = `<div class="flex-shrink-0 w-full h-full flex items-center justify-center"><span class="text-white/40">No preview available</span></div>`;
+      return;
+    }
+    
+    // Create slides: [clone-last] [1] [2] [3] [4] [clone-first]
+    let slidesHtml = '';
+    
+    // Clone of last image (for seamless backward loop)
+    slidesHtml += createSlide(images[images.length - 1], 'clone-last');
+    
+    // Original images
+    images.forEach((img, i) => {
+      slidesHtml += createSlide(img, `slide-${i}`);
+    });
+    
+    // Clone of first image (for seamless forward loop)
+    slidesHtml += createSlide(images[0], 'clone-first');
+    
+    carouselContainer.innerHTML = slidesHtml;
+    
+    // Start at position 1 (first real image, after clone-last)
+    carouselContainer.style.transition = 'none';
+    carouselContainer.style.transform = `translateX(-100%)`;
+  }
+  
+  function createSlide(img, id) {
+    if (!img) return `<div class="flex-shrink-0 w-full h-full flex items-center justify-center" data-slide="${id}"><span class="text-white/40">No preview</span></div>`;
+    return `<div class="flex-shrink-0 w-full h-full flex items-center justify-center p-2" data-slide="${id}">
+      <img src="${img}" alt="Project screenshot" class="max-w-full max-h-full object-contain rounded-xl">
+    </div>`;
+  }
+  
+  // Open Modal
+  function openModal(projectId) {
+    currentProject = projectsData.find(p => p.id === projectId);
+    if (!currentProject) return;
+    
+    currentImageIndex = 0;
+    isTransitioning = false;
+    const isLandscape = currentProject.imageOrientation === 'landscape';
+    
+    // Same side-by-side layout for ALL, but different widths
+    modalInner.className = 'flex flex-col md:flex-row h-full max-h-[90vh]';
+    if (isLandscape) {
+      // Landscape: 50% image, 50% content
+      modalImagesSection.className = 'relative bg-gradient-to-br from-slate-800 via-slate-900 to-indigo-950 md:w-1/2 flex-shrink-0 h-72 md:h-auto md:min-h-[450px] p-3';
+    } else {
+      // Portrait: 50% image, 50% content
+      modalImagesSection.className = 'relative bg-gradient-to-br from-slate-800 via-slate-900 to-indigo-950 md:w-1/2 flex-shrink-0 h-72 md:h-auto md:min-h-[450px] p-3';
+    }
+    
+    // Populate content
+    document.getElementById('modal-category').textContent = currentProject.category;
+    document.getElementById('modal-title').textContent = currentProject.title;
+    document.getElementById('modal-role').textContent = currentProject.role ? `${currentProject.role}${currentProject.company ? ' at ' + currentProject.company : ''}` : '';
+    document.getElementById('modal-desc').textContent = currentProject.fullDesc;
+    
+    // Proprietary
+    const proprietaryDiv = document.getElementById('modal-proprietary');
+    const proprietaryText = document.getElementById('proprietary-text');
+    if (currentProject.proprietaryNote) {
+      proprietaryDiv.classList.remove('hidden');
+      proprietaryText.textContent = currentProject.proprietaryNote;
+    } else {
+      proprietaryDiv.classList.add('hidden');
+    }
+    
+    // Tech Stack
+    document.getElementById('modal-tech').innerHTML = currentProject.techStack.map(tech => 
+      `<span class="px-3 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full">${tech}</span>`
+    ).join('');
+    
+    // Features
+    document.getElementById('modal-features').innerHTML = currentProject.features.map(f => 
+      `<li class="flex items-start gap-2"><span class="material-icons-round text-primary text-lg mt-0.5 flex-shrink-0">check_circle</span><span class="text-text-main">${f}</span></li>`
+    ).join('');
+    
+    // Buttons
+    let buttonsHtml = '';
+    if (currentProject.liveUrl) {
+      buttonsHtml += `<a href="${currentProject.liveUrl}" target="_blank" class="flex items-center gap-2 px-5 py-2.5 bg-primary text-white font-medium rounded-full hover:bg-primary-dark transition-colors"><span class="material-icons-round text-lg">open_in_new</span>Try It</a>`;
+    }
+    if (currentProject.githubUrl) {
+      const githubUrls = currentProject.githubUrl.split(' | ');
+      if (githubUrls.length > 1) {
+        // Multiple GitHub links - show labeled buttons
+        buttonsHtml += `<a href="${githubUrls[0]}" target="_blank" class="flex items-center gap-2 px-4 py-2.5 border-2 border-gray-300 text-text-main font-medium rounded-full hover:border-gray-400 transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>Web</a>`;
+        buttonsHtml += `<a href="${githubUrls[1]}" target="_blank" class="flex items-center gap-2 px-4 py-2.5 border-2 border-gray-300 text-text-main font-medium rounded-full hover:border-gray-400 transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>Mobile</a>`;
+      } else {
+        // Single GitHub link
+        buttonsHtml += `<a href="${currentProject.githubUrl}" target="_blank" class="flex items-center gap-2 px-5 py-2.5 border-2 border-gray-300 text-text-main font-medium rounded-full hover:border-gray-400 transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a>`;
+      }
+    }
+    document.getElementById('modal-buttons').innerHTML = buttonsHtml;
+    
+    // Build carousel
+    const images = currentProject.images.length > 0 ? currentProject.images : [currentProject.thumbnail || ''];
+    totalImages = images.length;
+    buildCarousel(images);
+    updateImageCounter();
+    
+    // Show/hide controls
+    const showControls = images.length > 1;
+    carouselPrev.style.display = showControls ? 'flex' : 'none';
+    carouselNext.style.display = showControls ? 'flex' : 'none';
+    imageCounter.style.display = showControls ? 'block' : 'none';
+    
+    // Show modal
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(() => {
+      modalContent.classList.remove('scale-95', 'opacity-0');
+      modalContent.classList.add('scale-100', 'opacity-100');
+    });
+  }
+  
+  // Close Modal
+  function closeModal() {
+    modalContent.classList.remove('scale-100', 'opacity-100');
+    modalContent.classList.add('scale-95', 'opacity-0');
+    setTimeout(() => {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }, 300);
+  }
+  
+  // Update counter
+  function updateImageCounter() {
+    imageCounter.textContent = `${currentImageIndex + 1} / ${totalImages}`;
+  }
+  
+  // Navigate carousel - TRUE INFINITE LOOP (always moves forward/backward continuously)
+  function goToImage(direction) {
+    if (!currentProject || totalImages <= 1 || isTransitioning) return;
+    
+    isTransitioning = true;
+    
+    // Calculate position (remember: slides are [clone-last][1][2][3][4][clone-first])
+    // Current position in carousel: currentImageIndex + 1 (because of clone-last at start)
+    let newPosition = currentImageIndex + 1;
+    
+    if (direction === 'next') {
+      newPosition++;
+      currentImageIndex++;
+    } else {
+      newPosition--;
+      currentImageIndex--;
+    }
+    
+    // Animate to new position
+    carouselContainer.style.transition = 'transform 0.4s ease-out';
+    carouselContainer.style.transform = `translateX(-${newPosition * 100}%)`;
+    
+    // Handle wrap-around after animation
+    setTimeout(() => {
+      // If we went to clone-first (past last image), jump to real first
+      if (currentImageIndex >= totalImages) {
+        currentImageIndex = 0;
+        carouselContainer.style.transition = 'none';
+        carouselContainer.style.transform = `translateX(-100%)`; // Position 1 (first real)
+      }
+      // If we went to clone-last (before first image), jump to real last
+      else if (currentImageIndex < 0) {
+        currentImageIndex = totalImages - 1;
+        carouselContainer.style.transition = 'none';
+        carouselContainer.style.transform = `translateX(-${totalImages * 100}%)`; // Last real position
+      }
+      
+      updateImageCounter();
+      isTransitioning = false;
+    }, 400);
+  }
+  
+  // Event Listeners
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => openModal(card.dataset.projectId));
+  });
+  
+  modalClose.addEventListener('click', closeModal);
+  modalBackdrop.addEventListener('click', closeModal);
+  
+  carouselPrev.addEventListener('click', (e) => { e.stopPropagation(); goToImage('prev'); });
+  carouselNext.addEventListener('click', (e) => { e.stopPropagation(); goToImage('next'); });
+  
+  // Keyboard
+  document.addEventListener('keydown', (e) => {
+    if (modal.classList.contains('hidden')) return;
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'ArrowLeft') goToImage('prev');
+    if (e.key === 'ArrowRight') goToImage('next');
+  });
+  
+  // Touch swipe
+  let touchStartX = 0;
+  carouselWrapper.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+  carouselWrapper.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 50) goToImage(diff > 0 ? 'next' : 'prev');
+  }, { passive: true });
+  
+  // ===== FULLSCREEN IMAGE VIEWER =====
+  const fullscreenOverlay = document.getElementById('fullscreen-overlay');
+  const fullscreenImage = document.getElementById('fullscreen-image');
+  const fullscreenClose = document.getElementById('fullscreen-close');
+  const fullscreenPrev = document.getElementById('fullscreen-prev');
+  const fullscreenNext = document.getElementById('fullscreen-next');
+  const fullscreenCounter = document.getElementById('fullscreen-counter');
+  let fullscreenIndex = 0;
+  
+  function openFullscreen() {
+    if (!currentProject || currentProject.images.length === 0) return;
+    fullscreenIndex = currentImageIndex;
+    updateFullscreenImage();
+    fullscreenOverlay.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeFullscreen() {
+    fullscreenOverlay.classList.add('hidden');
+  }
+  
+  function updateFullscreenImage() {
+    if (!currentProject) return;
+    fullscreenImage.src = currentProject.images[fullscreenIndex];
+    fullscreenCounter.textContent = `${fullscreenIndex + 1} / ${currentProject.images.length}`;
+  }
+  
+  function goToFullscreenImage(direction) {
+    if (!currentProject) return;
+    const len = currentProject.images.length;
+    if (direction === 'next') {
+      fullscreenIndex = (fullscreenIndex + 1) % len;
+    } else {
+      fullscreenIndex = (fullscreenIndex - 1 + len) % len;
+    }
+    updateFullscreenImage();
+    // Sync carousel
+    currentImageIndex = fullscreenIndex;
+    updateCounter();
+    carouselContainer.style.transition = 'transform 0.4s ease';
+    carouselContainer.style.transform = `translateX(-${(currentImageIndex + 1) * 100}%)`;
+  }
+  
+  // Fullscreen event listeners
+  carouselWrapper.style.cursor = 'pointer';
+  carouselWrapper.addEventListener('click', (e) => {
+    if (e.target.closest('#carousel-prev') || e.target.closest('#carousel-next')) return;
+    openFullscreen();
+  });
+  
+  fullscreenClose.addEventListener('click', closeFullscreen);
+  fullscreenOverlay.addEventListener('click', (e) => {
+    if (e.target === fullscreenOverlay) closeFullscreen();
+  });
+  fullscreenPrev.addEventListener('click', (e) => { e.stopPropagation(); goToFullscreenImage('prev'); });
+  fullscreenNext.addEventListener('click', (e) => { e.stopPropagation(); goToFullscreenImage('next'); });
+  
+  // Update keyboard handler
+  document.removeEventListener('keydown', () => {});
+  document.addEventListener('keydown', (e) => {
+    // Fullscreen is open
+    if (!fullscreenOverlay.classList.contains('hidden')) {
+      if (e.key === 'Escape') closeFullscreen();
+      if (e.key === 'ArrowLeft') goToFullscreenImage('prev');
+      if (e.key === 'ArrowRight') goToFullscreenImage('next');
+      return;
+    }
+    // Modal is open
+    if (!modal.classList.contains('hidden')) {
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowLeft') goToImage('prev');
+      if (e.key === 'ArrowRight') goToImage('next');
+    }
+  });
+</script>

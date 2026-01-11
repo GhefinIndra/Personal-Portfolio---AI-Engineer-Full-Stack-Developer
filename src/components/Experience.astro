@@ -1,0 +1,70 @@
+---
+// Ordered by most recent first (Present comes first)
+const experiences = [
+  {
+    period: 'Aug 2025 - Present',
+    title: 'Full Stack Developer Intern',
+    company: 'PT. Infomedia Nusantara',
+    description: 'Developed E-Commerce Manager platform with Flutter and Node.js. Integrated TikTok Shop and Shopee APIs for multi-marketplace management with OAuth authentication.'
+  },
+  {
+    period: 'Sep 2025 - Jan 2026',
+    title: 'AI Engineer Intern',
+    company: 'Telkom Indonesia',
+    description: 'Developed AI-powered document validation system with OCR and LLM integration. Built REST APIs with FastAPI and created Streamlit interfaces for intelligent document analysis.'
+  },
+];
+---
+
+<section id="experience" class="py-20 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-in-up">
+      <span class="text-primary font-bold tracking-wider text-sm uppercase">My Journey</span>
+      <h2 class="mt-3 font-display text-3xl md:text-5xl font-bold text-text-main">Professional Experience</h2>
+    </div>
+    
+    <div class="relative">
+      <!-- Timeline line -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-200 hidden md:block"></div>
+      
+      <div class="space-y-12">
+        {experiences.map((exp, i) => (
+          <div class="relative flex flex-col md:flex-row items-center justify-between group timeline-item">
+            <!-- Timeline dot -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-md z-10 hidden md:block">
+              {i === 0 && <div class="absolute inset-0 bg-primary rounded-full animate-ping opacity-75"></div>}
+            </div>
+            
+            <!-- Left side (odd) or spacer (even) -->
+            {i % 2 === 0 ? (
+              <div class="md:w-5/12 text-right order-1 pr-8 perspective-1000">
+                <div class="tilt-card bg-white p-6 rounded-2xl border border-gray-100 shadow-soft">
+                  <span class="text-primary font-semibold text-sm">{exp.period}</span>
+                  <h3 class="font-display font-bold text-xl text-text-main mt-1">{exp.title}</h3>
+                  <p class="text-primary font-medium text-sm mt-1">{exp.company}</p>
+                  <p class="text-text-muted text-sm mt-2">{exp.description}</p>
+                </div>
+              </div>
+            ) : (
+              <div class="md:w-5/12 order-1"></div>
+            )}
+            
+            <!-- Right side (even) or spacer (odd) -->
+            {i % 2 === 1 ? (
+              <div class="md:w-5/12 text-left order-2 pl-8 perspective-1000">
+                <div class="tilt-card bg-white p-6 rounded-2xl border border-gray-100 shadow-soft">
+                  <span class="text-primary font-semibold text-sm">{exp.period}</span>
+                  <h3 class="font-display font-bold text-xl text-text-main mt-1">{exp.title}</h3>
+                  <p class="text-primary font-medium text-sm mt-1">{exp.company}</p>
+                  <p class="text-text-muted text-sm mt-2">{exp.description}</p>
+                </div>
+              </div>
+            ) : (
+              <div class="md:w-5/12 order-2"></div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

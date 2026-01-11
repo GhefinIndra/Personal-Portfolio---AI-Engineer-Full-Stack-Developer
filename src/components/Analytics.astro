@@ -1,0 +1,19 @@
+---
+const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+
+const enableInDev = false;
+const isDev = import.meta.env.DEV;
+const isEnabled = !isDev || enableInDev;
+---
+
+{isEnabled && (
+  <>
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+    <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', GA_MEASUREMENT_ID);
+    </script>
+  </>
+)}

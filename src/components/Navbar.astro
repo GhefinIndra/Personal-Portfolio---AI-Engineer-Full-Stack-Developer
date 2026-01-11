@@ -1,0 +1,111 @@
+---
+const navLinks = [
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#education', label: 'Education' },
+  { href: '#services', label: 'Services' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#leadership', label: 'Leadership' },
+  { href: '#achievements', label: 'Achievements' },
+  { href: '#contact', label: 'Contact' },
+];
+---
+
+<nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-colors duration-300" id="navbar">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <!-- Logo with right margin -->
+      <a href="#home" class="flex-shrink-0 flex items-center gap-1 cursor-pointer mr-8">
+        <span class="font-display font-bold text-xl tracking-tight text-text-main">
+          Ghefin<span class="text-primary">Indra</span>
+        </span>
+      </a>
+      
+      <!-- Desktop Nav - CENTERED -->
+      <div class="hidden xl:flex items-center justify-center flex-1">
+        <div class="flex items-center gap-5">
+          {navLinks.map((link) => (
+            <a 
+              href={link.href} 
+              class="nav-link py-2 text-sm font-medium text-text-muted hover:text-primary transition-colors border-b-2 border-transparent whitespace-nowrap"
+              data-section={link.href.replace('#', '')}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+      
+      <!-- CTA with left margin -->
+      <div class="flex items-center ml-8">
+        <a 
+          href="https://wa.me/6282268639543" 
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden md:inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full text-white bg-text-main hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 whitespace-nowrap"
+        >
+          Let's Talk
+        </a>
+        
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="xl:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+          <span class="material-icons-round text-text-main">menu</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden xl:hidden bg-white border-t border-gray-100 shadow-lg">
+    <div class="px-4 py-4 space-y-2">
+      {navLinks.map((link) => (
+        <a 
+          href={link.href} 
+          class="block px-4 py-3 text-base font-medium text-text-muted hover:text-primary hover:bg-gray-50 rounded-lg transition-colors"
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Mobile menu toggle
+  document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+    document.getElementById('mobile-menu')?.classList.toggle('hidden');
+  });
+  
+  // Close mobile menu on link click
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobile-menu')?.classList.add('hidden');
+    });
+  });
+
+  // Active section indicator
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            link.classList.remove('text-primary', 'border-primary');
+            link.classList.add('text-text-muted', 'border-transparent');
+            if (link.getAttribute('data-section') === id) {
+              link.classList.remove('text-text-muted', 'border-transparent');
+              link.classList.add('text-primary', 'border-primary');
+            }
+          });
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '-100px 0px -40% 0px' });
+    
+    sections.forEach(section => observer.observe(section));
+  });
+</script>
