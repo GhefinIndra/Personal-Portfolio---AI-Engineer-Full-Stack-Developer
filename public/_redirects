@@ -1,0 +1,2 @@
+# Redirect .pages.dev to custom domain
+https://ghefin-portfolio.pages.dev/* https://ghefinindra.dev/:splat 301!
