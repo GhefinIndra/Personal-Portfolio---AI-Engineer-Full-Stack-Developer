@@ -25,16 +25,17 @@ const navLinks = [
       
       <!-- Desktop Nav - CENTERED -->
       <div class="hidden xl:flex items-center justify-center flex-1">
-        <div class="flex items-center gap-5">
+        <div id="nav-links" class="relative flex items-center gap-5">
           {navLinks.map((link) => (
             <a 
               href={link.href} 
-              class="nav-link py-2 text-sm font-medium text-text-muted hover:text-primary transition-colors border-b-2 border-transparent whitespace-nowrap"
+              class="nav-link py-2 text-sm font-medium text-text-muted hover:text-primary transition-colors whitespace-nowrap"
               data-section={link.href.replace('#', '')}
             >
               {link.label}
             </a>
           ))}
+          <span id="nav-indicator" class="absolute -bottom-1 h-0.5 bg-primary rounded-full transition-all duration-300 ease-out" style="width: 0; transform: translateX(0); opacity: 0;"></span>
         </div>
       </div>
       
@@ -85,27 +86,75 @@ const navLinks = [
     });
   });
 
-  // Active section indicator
+  // Active section indicator (more reliable on long sections)
   document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+    const navbar = document.getElementById('navbar');
+    let ticking = false;
     
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
-          navLinks.forEach(link => {
-            link.classList.remove('text-primary', 'border-primary');
-            link.classList.add('text-text-muted', 'border-transparent');
-            if (link.getAttribute('data-section') === id) {
-              link.classList.remove('text-text-muted', 'border-transparent');
-              link.classList.add('text-primary', 'border-primary');
-            }
-          });
+    let activeLink = null;
+    
+    function moveIndicator(link) {
+      const indicator = document.getElementById('nav-indicator');
+      const linksWrapper = document.getElementById('nav-links');
+      if (!indicator || !linksWrapper || !link) return;
+      const linkRect = link.getBoundingClientRect();
+      const wrapperRect = linksWrapper.getBoundingClientRect();
+      const left = linkRect.left - wrapperRect.left;
+      indicator.style.width = `${linkRect.width}px`;
+      indicator.style.transform = `translateX(${left}px)`;
+      indicator.style.opacity = '1';
+    }
+    
+    function setActive(id) {
+      navLinks.forEach(link => {
+        link.classList.remove('text-primary', 'border-primary');
+        link.classList.add('text-text-muted', 'border-transparent');
+        if (link.getAttribute('data-section') === id) {
+          link.classList.remove('text-text-muted', 'border-transparent');
+          link.classList.add('text-primary', 'border-primary');
+          activeLink = link;
+          moveIndicator(link);
         }
       });
-    }, { threshold: 0.2, rootMargin: '-100px 0px -40% 0px' });
+    }
     
-    sections.forEach(section => observer.observe(section));
+    function updateActive() {
+      const offset = (navbar?.offsetHeight || 80) + 24;
+      let currentId = sections[0]?.id;
+      
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= offset && rect.bottom > offset) {
+          currentId = section.id;
+        }
+      });
+      
+      if (!currentId && sections.length) {
+        currentId = sections[sections.length - 1].id;
+      }
+      
+      if (currentId) setActive(currentId);
+    }
+    
+    function onScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateActive();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    
+    navLinks.forEach(link => {
+      link.addEventListener('mouseenter', () => moveIndicator(link));
+      link.addEventListener('mouseleave', () => activeLink && moveIndicator(activeLink));
+    });
+    
+    updateActive();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', () => activeLink && moveIndicator(activeLink));
   });
 </script>
