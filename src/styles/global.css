@@ -49,3 +49,8 @@ html {
 .perspective-1000 {
   perspective: 1000px;
 }
+
+/* Project cards animation performance */
+.project-card {
+  will-change: transform, opacity;
+}
