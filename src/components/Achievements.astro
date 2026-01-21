@@ -20,10 +20,12 @@ const achievements = [
   {
     title: 'IEEE ICSECS 2025',
     subtitle: 'Paper Presenter',
-    description: 'Presented research paper on "Optimization Techniques for Enhancing ANN Performance in Network Intrusion Detection Using Differential Evolution" at IEEE 9th International Conference.',
+    note: '2nd Author',
+    description: 'Presented research paper on "Optimization Techniques for Enhancing ANN Performance in Network Intrusion Detection Using Differential Evolution" at IEEE 9th International Conference (2nd author).',
     image: '/images/icsecs25-certificate_page-0001.jpg',
     date: 'October 2025',
     location: 'Pahang, Malaysia',
+    paperUrl: 'https://www.researchgate.net/publication/399703416_Optimization_Techniques_for_Enhancing_Artificial_Neural_Network_Performance_in_Network_Intrusion_Detection_Using_Differential_Evolution',
   },
   {
     title: 'Azure AI Fundamentals',
@@ -32,6 +34,24 @@ const achievements = [
     image: '/images/azure-ai900-cert.jpg',
     date: 'May 2025',
     location: 'Microsoft',
+  },
+  {
+    title: 'JICT Journal Publication',
+    subtitle: 'Research Paper',
+    description: 'Ghefin Indra, Najwa Aulia Aziza, Hazna Hamida Saputri, "Penerapan MobileNet untuk Klasifikasi Kondisi Wajah Mengantuk pada Citra Wajah", Journal of Informatics and Communication Technology (JICT), Vol. 7 No. 1, pp. 189-197, 2025.',
+    image: '/images/Ghefin_Paper.png',
+    date: 'June 2025',
+    location: 'JICT',
+    paperUrl: 'https://ejournal.akademitelkom.ac.id/j_ict/index.php/j_ict/article/view/413?utm_source=chatgpt.com',
+  },
+  {
+    title: 'ICoICT 2026',
+    subtitle: 'Paper Accepted',
+    description: 'Paper accepted for presentation at the 14th International Conference on Information and Communication Technology (ICoICT) in Bali: "Detection of AI Generated Faces and Real Human Faces Using Deep Learning-Based Transfer Learning".',
+    image: '/images/LoA_redacted.png',
+    date: 'January 2026',
+    location: 'Bali, Indonesia',
+    paperUrl: 'https://icoict.org/',
   },
 ];
 ---
@@ -75,10 +95,25 @@ const achievements = [
           <div class="p-4">
             <h3 class="font-display font-bold text-base text-text-main mb-1">{item.title}</h3>
             <p class="text-text-muted text-xs mb-2 leading-relaxed">{item.description}</p>
+            {item.note && (
+              <div class="text-[11px] font-semibold text-primary mb-2">{item.note}</div>
+            )}
             <div class="flex items-center gap-2 text-xs text-text-muted">
               <span class="material-icons-round text-sm">calendar_today</span>
               <span>{item.date}</span>
             </div>
+            {item.paperUrl && (
+              <a
+                href={item.paperUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onclick="event.stopPropagation()"
+                class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-primary-dark"
+              >
+                <span class="material-icons-round text-sm">open_in_new</span>
+                View Paper
+              </a>
+            )}
           </div>
         </div>
       ))}
